@@ -27,24 +27,24 @@ public class BookController {
     this.bookService = bookService;
   }
 
-  @ResponseStatus(code = HttpStatus.CREATED)
-  @PostMapping(value = "/book/create")
-  public ResponseEntity createBook(@RequestBody Book book) {
-    bookService.createBook(book);
-    return ResponseEntity.ok().build();
-  }
-
-  @PutMapping(value = "/book/update")
-  public ResponseEntity updateBook(@RequestBody Book book) {
-    bookService.updateBook(book);
-    return ResponseEntity.ok().build();
-  }
-
-  @DeleteMapping(value = "/book/delete")
-  public ResponseEntity deleteBook(@RequestParam Integer id) {
-    bookService.deleteBook(id);
-    return ResponseEntity.ok().build();
-  }
+//  @ResponseStatus(code = HttpStatus.CREATED)
+//  @PostMapping(value = "/book/create")
+//  public ResponseEntity createBook(@RequestBody Book book) {
+//    bookService.createBook(book);
+//    return ResponseEntity.ok().build();
+//  }
+//
+//  @PutMapping(value = "/book/update")
+//  public ResponseEntity updateBook(@RequestBody Book book) {
+//    bookService.updateBook(book);
+//    return ResponseEntity.ok().build();
+//  }
+//
+//  @DeleteMapping(value = "/book/delete")
+//  public ResponseEntity deleteBook(@RequestParam Integer id) {
+//    bookService.deleteBook(id);
+//    return ResponseEntity.ok().build();
+//  }
 
   @GetMapping(value = "/book-search")
   public ResponseEntity getBook(@RequestParam Map<String, String> allParams) {
