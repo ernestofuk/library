@@ -3,6 +3,8 @@ package com.example.library.demolibrary.model.entity;
 import java.util.List;
 import java.util.spi.LocaleServiceProvider;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -10,6 +12,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Book {
 
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Id
   private Integer id;
 
