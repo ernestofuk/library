@@ -50,6 +50,6 @@ public class UserController {
   @GetMapping(value = "/get")
   public ResponseEntity getUser() {
     List<User> users = userResource.getUser();
-    return ResponseEntity.ok().build();
+    return ResponseEntity.ok(users);
   }
 }
